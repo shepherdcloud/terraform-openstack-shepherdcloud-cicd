@@ -1,6 +1,7 @@
 #**************************** CICD network ******************************
 module "cicd_network" {
-  source              = "../terraform-os-network/"
+  #source              = "../terraform-os-network/"
+  source              = "git@github.com:shepherdcloud/terraform-openstack-network.git"
   network_name        = "${var.project_name}-cicd-net"
   network_tags        = ["${var.project_name}", "cicd", "shepherdcloud"]
   network_description = "${var.network_description}"
